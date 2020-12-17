@@ -5,6 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #9796f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #fbc7d4,
+    #9796f0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #fbc7d4,
+    #9796f0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
 }
 
 code {
@@ -15,9 +28,9 @@ h1 {
   font-weight: 300;
 }
 .main {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 5%;
   font-weight: 300;
   text-align: center;
@@ -54,10 +67,15 @@ h3 {
 a {
   text-decoration: none;
   transition: all 0.5s;
-  color: black;
+  color: white;
 }
 
 a:hover {
-  color: white;
-  background: grey;
+  background: #9796f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #fbc7d4,
+    #9796f0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #fbc7d4, #9796f0);
 }
