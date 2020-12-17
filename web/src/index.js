@@ -181,171 +181,171 @@ class App extends React.Component {
     // const listItems = this.state.itemsR.map((number) => <li>{number}</li>);
     return (
       <div className="main">
-        <h1>Daily Tasks</h1>
-        <i>Roi's and Ayla's progress</i>
-        <div className="row">
-          <div className="bi left">
-            <h2>🥶 Roi 🥶</h2>
-            <p>
-              {this.state.roiTasks.skSoc}{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/S214gTczDcn1nYyS6"
-              >
-                Sport
-              </a>
-            </p>
-            <p>
-              {this.state.roiTasks.ex}{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/xM33ELo2p2zotY9e6"
-              >
-                Exercise
-              </a>
-            </p>
-            <p>
-              {this.state.roiTasks.sBook}{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/muVzbtNgFfooD3nVA"
-              >
-                Small Book
-              </a>
-            </p>
-            <p>
-              {this.state.roiTasks.lBook}{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/WSo3Anc3jgcmpVNx8"
-              >
-                Large Book
-              </a>
-            </p>
-            <p>
-              {this.state.roiTasks.mag1}{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/ipkkjwYc41FBTDza8"
-              >
-                Magazine/Article
-              </a>
-            </p>
-            <p>
-              {this.state.roiTasks.you1}{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/ptnMH28cyrvtUmw16"
-              >
-                YouTube Video #1
-              </a>
-            </p>
-            <p>
-              {this.state.roiTasks.you2}{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/UNEVSmxNu3Prf5rG6"
-              >
-                YouTube Video #2
-              </a>
-            </p>
+        <div className="mainIn">
+          <h1>Daily Tasks</h1>
+          <div className="row">
+            <div className="bi left">
+              <h2>🥶 Roi 🥶</h2>
+              <p>
+                {this.state.roiTasks.skSoc}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/S214gTczDcn1nYyS6"
+                >
+                  Sport
+                </a>
+              </p>
+              <p>
+                {this.state.roiTasks.ex}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/xM33ELo2p2zotY9e6"
+                >
+                  Exercise
+                </a>
+              </p>
+              <p>
+                {this.state.roiTasks.sBook}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/muVzbtNgFfooD3nVA"
+                >
+                  Small Book
+                </a>
+              </p>
+              <p>
+                {this.state.roiTasks.lBook}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/WSo3Anc3jgcmpVNx8"
+                >
+                  Large Book
+                </a>
+              </p>
+              <p>
+                {this.state.roiTasks.mag1}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/ipkkjwYc41FBTDza8"
+                >
+                  Magazine/Article
+                </a>
+              </p>
+              <p>
+                {this.state.roiTasks.you1}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/ptnMH28cyrvtUmw16"
+                >
+                  YouTube Video #1
+                </a>
+              </p>
+              <p>
+                {this.state.roiTasks.you2}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/UNEVSmxNu3Prf5rG6"
+                >
+                  YouTube Video #2
+                </a>
+              </p>
 
-            {/* <ul>
+              {/* <ul>
               {this.state.itemsR.map((ob) => {
                 return <li>{ob}</li>;
               })}
             </ul> */}
-          </div>
-          <div className="bi right">
-            <h2>🤪 Ayla 🤪</h2>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/S214gTczDcn1nYyS6"
-              >
-                Sport
-              </a>{" "}
-              {this.state.aylaTasks.skSoc}
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/xM33ELo2p2zotY9e6"
-              >
-                Exercise
-              </a>{" "}
-              {this.state.aylaTasks.ex}
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/muVzbtNgFfooD3nVA"
-              >
-                Small Book
-              </a>{" "}
-              {this.state.aylaTasks.sBook}
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/WSo3Anc3jgcmpVNx8"
-              >
-                Large Book
-              </a>{" "}
-              {this.state.aylaTasks.lBook}
-            </p>
+            </div>
+            <div className="bi right">
+              <h2>🤪 Ayla 🤪</h2>
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/S214gTczDcn1nYyS6"
+                >
+                  Sport
+                </a>{" "}
+                {this.state.aylaTasks.skSoc}
+              </p>
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/xM33ELo2p2zotY9e6"
+                >
+                  Exercise
+                </a>{" "}
+                {this.state.aylaTasks.ex}
+              </p>
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/muVzbtNgFfooD3nVA"
+                >
+                  Small Book
+                </a>{" "}
+                {this.state.aylaTasks.sBook}
+              </p>
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/WSo3Anc3jgcmpVNx8"
+                >
+                  Large Book
+                </a>{" "}
+                {this.state.aylaTasks.lBook}
+              </p>
 
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/ipkkjwYc41FBTDza8"
-              >
-                Magazine/Article
-              </a>{" "}
-              {this.state.aylaTasks.mag1}
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/ptnMH28cyrvtUmw16"
-              >
-                YouTube Video #1
-              </a>{" "}
-              {this.state.aylaTasks.you1}
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://forms.gle/UNEVSmxNu3Prf5rG6"
-              >
-                YouTube Video #2
-              </a>{" "}
-              {this.state.aylaTasks.you2}
-            </p>
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/ipkkjwYc41FBTDza8"
+                >
+                  Magazine/Article
+                </a>{" "}
+                {this.state.aylaTasks.mag1}
+              </p>
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/ptnMH28cyrvtUmw16"
+                >
+                  YouTube Video #1
+                </a>{" "}
+                {this.state.aylaTasks.you1}
+              </p>
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/UNEVSmxNu3Prf5rG6"
+                >
+                  YouTube Video #2
+                </a>{" "}
+                {this.state.aylaTasks.you2}
+              </p>
 
-            {/* <ul>
+              {/* <ul>
               {this.state.itemsA.map((ob) => {
                 return <li>{ob}</li>;
               })}
             </ul> */}
+            </div>
           </div>
         </div>
-        <h3>View responses</h3>
-        <i>Click on the links below to see previous responses.</i>
+        <h3>View previous responses</h3>
         <p className="center">
           <a
             target="_blank"
