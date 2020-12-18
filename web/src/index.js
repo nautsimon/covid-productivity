@@ -101,6 +101,15 @@ class App extends React.Component {
             }
           }
         }
+        console.log(today.getDate(), today.getDate() % 2);
+        if (today.getDate() % 2 === 0) {
+          console.log(today.getDate());
+          tasksR.mag1 = "✅";
+          tasksA.mag1 = "✅";
+        } else {
+          tasksR.sBook = "✅";
+          tasksA.sBook = "✅";
+        }
         var output = { tasksR: tasksR, tasksA: tasksA };
 
         return output;
@@ -112,70 +121,6 @@ class App extends React.Component {
           aylaTasks: output.tasksA,
         });
       });
-    // let getData = function () {
-    //   return new Promise(function (resolve, reject) {
-
-    //     for (let task = 0; task < 7; task++) {
-    //       fetch(endpoints[task])
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //           let batchRowValues = data.valueRanges[0].values;
-    //           for (let i = 1; i < batchRowValues.length; i++) {
-    //             console.log(batchRowValues[i][1].toString(), date);
-
-    //             if (batchRowValues[i][2] === "Ayla") {
-    //               if (batchRowValues[i][1] === date) {
-    //                 tasksA[task] = "✅";
-    //                 // for (let x = 3; x < batchRowValues[i].length; x++) {
-    //                 //   rowsA.push(batchRowValues[i][x]);
-    //                 // console.log(tasksA);
-    //                 // }
-    //               }
-    //             } else {
-    //               if (batchRowValues[i][1] === date) {
-    //                 tasksR[task] = "✅";
-    //                 // console.log(tasksR);
-    //                 // for (let x = 3; x < batchRowValues[i].length; x++) {
-    //                 //   rowsA.push(batchRowValues[i][x]);
-    //                 // console.log(tasksA);
-    //                 // }
-    //               }
-    //               // if (rowsR.length > 1 && rowsA.length > 1) {
-    //               //   break;
-    //               // }
-    //             }
-    //           }
-    //           // console.log(tasksR);
-    //         });
-    //     }
-
-    //     var output = { tasksR: tasksR, tasksA: tasksA };
-    //     // console.log(output);
-    //     resolve(output);
-    //   });
-    // };
-    // getData().then((output) => {
-    //   console.log(output.tasksR);
-
-    //   return this.setState((prevState) => ({
-    //     roiTasks: {
-    //       ...prevState.roiTasks,
-    //       sBook: output.tasksR[0],
-    //       mag1: output.tasksR[1],
-    //       lBook: output.tasksR[2],
-    //       skSoc: output.tasksR[3],
-    //       you1: output.tasksR[4],
-    //       you2: output.tasksR[5],
-    //       ex: output.tasksR[6],
-    //     },
-    //   }));
-
-    // console.log(
-    //   this.state.itemsA,
-    //   this.state.taskCompleteR,
-    //   this.state.taskCompleteA,
-    //   this.state.itemsR
-    // );
   }
   render() {
     // const listItems = this.state.itemsR.map((number) => <li>{number}</li>);
