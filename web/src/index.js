@@ -3,7 +3,16 @@ import ReactDOM from "react-dom";
 import React from "react";
 import axios from "axios";
 
-const tasks = ["sBook", "mag1", "lBook", "skSoc", "you1", "you2", "ex"];
+const tasks = [
+  "sBook",
+  "mag1",
+  "lBook",
+  "skSoc",
+  "you1",
+  "you2",
+  "ex",
+  "typing",
+];
 
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +30,7 @@ class App extends React.Component {
         you1: "⌛",
         you2: "⌛",
         ex: "⌛",
+        typing: "⌛",
       },
       roiTasks: {
         sBook: "⌛",
@@ -30,6 +40,7 @@ class App extends React.Component {
         you1: "⌛",
         you2: "⌛",
         ex: "⌛",
+        typing: "⌛",
       },
     };
   }
@@ -45,6 +56,7 @@ class App extends React.Component {
       you1: "⚠️",
       you2: "⚠️",
       ex: "⚠️",
+      typing: "⚠️",
     };
     var tasksR = {
       sBook: "⚠️",
@@ -54,6 +66,7 @@ class App extends React.Component {
       you1: "⚠️",
       you2: "⚠️",
       ex: "⚠️",
+      typing: "⚠️",
     };
     var today = new Date();
     var date =
@@ -82,10 +95,13 @@ class App extends React.Component {
         axios.get(
           "https://sheets.googleapis.com/v4/spreadsheets/1UAGz8wRBfpTFR8GDfWoFCb__ONhKelM_a2l8mPo6b4M/values:batchGet?ranges=Sheet1!A1:I5&majorDimension=ROWS&key=AIzaSyB4ccVNZXw8KZFWzAmju_6ZDQ_kTFOhMcg"
         ),
+        axios.get(
+          "https://sheets.googleapis.com/v4/spreadsheets/1iJXftmEELclYwvOsFt7IQbc0lfBKumNufXI_GK2sDh4/values:batchGet?ranges=Sheet1!A1:I5&majorDimension=ROWS&key=AIzaSyB4ccVNZXw8KZFWzAmju_6ZDQ_kTFOhMcg"
+        ),
       ])
       .then((responseArr) => {
         //this will be executed only when all requests are complete
-        for (let task = 0; task < 7; task++) {
+        for (let task = 0; task < 8; task++) {
           var stuff = responseArr[task].data.valueRanges[0].values;
           console.log(stuff);
           for (let i = 1; i < stuff.length; i++) {
@@ -201,6 +217,16 @@ class App extends React.Component {
                   YouTube Video #2
                 </a>
               </p>
+              <p>
+                {this.state.roiTasks.typing}{" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/3pViCE3YuLQNWTkf7"
+                >
+                  Typing
+                </a>
+              </p>
 
               {/* <ul>
               {this.state.itemsR.map((ob) => {
@@ -281,7 +307,16 @@ class App extends React.Component {
                 </a>{" "}
                 {this.state.aylaTasks.you2}
               </p>
-
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://forms.gle/3pViCE3YuLQNWTkf7"
+                >
+                  Typing
+                </a>{" "}
+                {this.state.aylaTasks.typing}
+              </p>
               {/* <ul>
               {this.state.itemsA.map((ob) => {
                 return <li>{ob}</li>;
@@ -347,6 +382,14 @@ class App extends React.Component {
           >
             {" "}
             [YouTube #2]{" "}
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/spreadsheets/d/1iJXftmEELclYwvOsFt7IQbc0lfBKumNufXI_GK2sDh4/edit?usp=sharing"
+          >
+            {" "}
+            [Typing]{" "}
           </a>
         </p>
       </div>
